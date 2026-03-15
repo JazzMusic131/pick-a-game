@@ -1,0 +1,19 @@
+columnSuffix: null
+handle: hoursPlayed
+instructions: null
+name: 'Hours Played'
+searchable: false
+settings:
+  decimals: 2
+  defaultValue: 0
+  max: null
+  min: 0
+  prefix: null
+  previewCurrency: null
+  previewFormat: decimal
+  size: null
+  step: null
+  suffix: hours
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

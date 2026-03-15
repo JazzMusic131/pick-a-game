@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: c9830e87-7103-4b77-91c3-539d99696549 # Game
+handle: games
+maxAuthors: 1
+name: Games
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  52a95eb3-8ad8-496e-8e7c-303db0e407a5: # Pick a Game
+    enabledByDefault: true
+    hasUrls: true
+    template: games/_entry.twig
+    uriFormat: 'games/{slug}'
+type: channel

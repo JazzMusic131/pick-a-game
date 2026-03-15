@@ -1,0 +1,35 @@
+{
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "craftcms/ckeditor": "5.2.0",
+    "craftcms/cms": "5.9.16",
+    "craftcms/feed-me": "6.11.0",
+    "doublesecretagency/craft-cpcss": "^3.0.0",
+    "nystudio107/craft-vite": "^5.0.1",
+    "putyourlightson/craft-datastar": "^1.0.0-RC.11",
+    "vlucas/phpdotenv": "^5.4.0"
+  },
+  "require-dev": {
+    "craftcms/generator": "^2.0.0",
+    "yiisoft/yii2-shell": "^2.0.3"
+  },
+  "config": {
+    "allow-plugins": {
+      "craftcms/plugin-installer": true,
+      "yiisoft/yii2-composer": true
+    },
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
+    ]
+  },
+  "autoload": {
+    "psr-4": {
+      "modules\\pickagame\\": "modules/pick-a-game/"
+    }
+  }
+}

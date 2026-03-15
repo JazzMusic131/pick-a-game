@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en
+name: 'Pick a Game'
+primary: true
+siteGroup: 6f317846-4aa5-4714-b323-a4d0927f26e3 # Pick a Game
+sortOrder: 1

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    <style>html{visibility: hidden;opacity:0;}</style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+    <meta name="referrer" content="origin-when-cross-origin"/>
+    <meta name="application-name" content="{{ siteName }}"/>
+    <title>{{ entry is defined ? entry.title ~ ' | ' }}{{ siteName }}</title>
+
+    {# Google Fonts - Raleway #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+
+    {# Favicons #}
+    <link rel="icon" type="image/png" href="{{ url('images/favicons/favicon-96x96.png') }}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ url('images/favicons/favicon.svg') }}" />
+    <link rel="shortcut icon" href="{{ url('images/favicons/favicon.ico') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('images/favicons/apple-touch-icon.png') }}" />
+    <meta name="apple-mobile-web-app-title" content="PickAGame" />
+    <link rel="manifest" href="{{ url('images/favicons/site.webmanifest') }}" />
+
+    {# Font Awesome #}
+    <script src="https://kit.fontawesome.com/ba92a04365.js" crossorigin="anonymous"></script>
+
+    {% set is_production = getenv('CRAFT_ENVIRONMENT') == 'production' %}
+    {% if is_production %}
+        {# production scripts #}
+    {% endif %}
+
+    {% block headerScripts %}
+    {% endblock %}
+
+</head>
+
+<body class="antialiased text-white custom-gradient font-raleway">
+
+    {% if is_production %}
+        {# production scripts (noscript) #}
+    {% endif %}
+
+    <div id="app" class="min-h-full">
+
+        {# Header #}
+        {% include "_partials/global/header.twig"%}
+
+        <main id="main" class="min-h-screen">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        {# Footer #}
+        {% include "_partials/global/footer.twig"%}
+
+        {# Vite #}
+        {{ craft.vite.script("src/js/app.js") }}
+
+        {% block scripts %}
+        {% endblock %}
+
+    </div>
+</body>
+</html>

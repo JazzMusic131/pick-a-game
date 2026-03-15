@@ -1,0 +1,252 @@
+allowLineBreaksInTitles: false
+color: indigo
+description: null
+fieldLayouts:
+  7831f009-6185-48a7-999f-8bb7a1cddddb:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-02-21T17:11:47+00:00'
+            elementCondition: null
+            heading: 'Game Information'
+            type: craft\fieldlayoutelements\Heading
+            uid: 2c250b13-9f3c-49f4-b5d4-d3b872c5eef1
+            userCondition: null
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-02-21T16:39:06+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 9c893eab-e41a-4a1f-b233-38f570f50046
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2026-02-21T16:52:25+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c1775f2d-89aa-43e1-862b-d9ac19d9f778 # Steam ID
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 78a48f23-3191-4849-9508-ee228ef5de50
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2026-02-21T16:52:25+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 4955ee96-8d42-4100-a5e1-6422a9c61f42 # Release Date
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f31479d-e355-43bf-8ccd-e9bf2ab7976a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-02-21T16:52:25+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 9aeb2fee-ff2f-4c24-a3db-3a8f64758d46
+            userCondition: null
+          -
+            dateAdded: '2026-02-21T16:52:25+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 3cc456a2-6841-482f-bb24-8c908f779d19 # Hours Played
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c82d6d4-5c62-4eb4-af66-ebf1d64812fa
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2026-02-21T16:52:25+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: bda87159-18d2-424c-bf74-62c2dacefb9e # Steam Deck Support
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cb9dd5b6-3bd6-4e90-bef2-55db5d2b784b
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2026-02-21T16:52:25+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: a8abcd46-676b-4bde-841c-e125d98e8b8f
+            userCondition: null
+          -
+            dateAdded: '2026-02-21T17:03:18+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 82422d31-cc8f-4630-b8b7-51d133532793 # Score
+            handle: steamUserScore
+            instructions: null
+            label: 'Steam User Score'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f62ffc52-0599-480a-84e6-add481d3751d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2026-02-21T17:03:18+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 0854e3c6-e8ba-41b1-b063-bbbe6c89dc06 # User Score Count
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca739142-ffc1-4df0-9ca2-92c07513e992
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2026-02-21T16:52:25+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 82422d31-cc8f-4630-b8b7-51d133532793 # Score
+            handle: wilsonScore
+            instructions: null
+            label: 'Wilson Score'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bcd23cad-3414-4664-8171-62f60674d194
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2026-02-21T16:52:25+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 82422d31-cc8f-4630-b8b7-51d133532793 # Score
+            handle: sdbRating
+            instructions: null
+            label: 'SDB Rating'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 975d1412-d7c1-4226-857f-cfe099a1816f
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2026-02-21T16:54:33+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 520cbbe7-55c0-4813-8cb3-7050997351aa
+            userCondition: null
+          -
+            dateAdded: '2026-02-21T16:54:33+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d22b97ad-e3bc-4f20-9e30-741fb9c45418 # Picked
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b3272077-9afe-4887-9e22-97f955274758
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0e0b32c2-2e03-412d-8162-ee7500bdad2f
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-02-21T17:11:47+00:00'
+            elementCondition: null
+            heading: Owners
+            type: craft\fieldlayoutelements\Heading
+            uid: 66590ca4-7a2c-468e-9188-7cf3e89d2b47
+            userCondition: null
+          -
+            dateAdded: '2026-02-21T17:11:47+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f282f261-a4ce-427c-bb65-b125746c9d79 # Owned By
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 39e303c1-d817-4f93-90fb-8d6b32a293ba
+            userCondition: null
+            warning: null
+            width: 100
+        name: Owners
+        uid: e0590c24-1874-4967-8232-c5b31d2f19ff
+        userCondition: null
+    thumbFieldKey: null
+handle: game
+hasTitleField: true
+icon: gamepad-modern
+name: Game
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

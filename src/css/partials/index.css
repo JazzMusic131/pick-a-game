@@ -1,0 +1,9 @@
+#pick-btn {
+
+    @apply p-8 bg-purple text-white rounded-lg text-xl lg:text-3xl shadow-md hover:bg-purple/80 transition-all opacity-100 animate-fadeout cursor-pointer;
+
+    &.hide {
+        @apply opacity-0;
+    }
+
+}

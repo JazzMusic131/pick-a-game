@@ -1,0 +1,60 @@
+/* Tailwind v4 */
+@import "tailwindcss";
+
+/* Partials */
+@import "./partials/colors.css";
+@import "./partials/footer.css";
+@import "./partials/forms.css";
+@import "./partials/index.css";
+
+/* Tailwind v4 source & plugins */
+@source "../../templates";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+/* Theme settings */
+@theme {
+
+    /* Fonts */
+    --font-raleway: "Raleway", "sans-serif";
+
+    /* Colors */
+    --color-purple: #6043D2;
+    --color-orange: #ec8c69;
+
+    /* Animations */
+    --animate-fadeout: fadeOut 0.3s ease-out;
+    --animate-fadein: fadeIn 0.3s ease-out;
+
+}
+
+/* Containers = https://v3.tailwindcss.com/docs/container */
+@utility container {
+    @apply px-4;
+    @variant 2xl {
+        @apply px-16;
+    }
+}
+
+/* Root-level styles */
+@layer root {
+
+    html {
+        visibility: visible !important;
+        opacity: 1  !important;
+        height: -webkit-fill-available;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+
+}
+
+/* Preloads - prevent animations from running */
+.preload {
+    transition: none !important;
+    animation-duration: 0.001s !important;
+}

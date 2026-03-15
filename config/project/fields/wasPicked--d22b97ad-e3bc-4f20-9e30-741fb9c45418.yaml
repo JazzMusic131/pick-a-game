@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: wasPicked
+instructions: null
+name: Picked
+searchable: false
+settings:
+  default: false
+  offLabel: 'No'
+  onLabel: 'Yes'
+  showLabelsInCards: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

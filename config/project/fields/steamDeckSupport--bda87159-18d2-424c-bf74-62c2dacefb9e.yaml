@@ -1,0 +1,79 @@
+columnSuffix: null
+handle: steamDeckSupport
+instructions: null
+name: 'Steam Deck Support'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Verified
+        -
+          - value
+          - verified
+        -
+          - icon
+          - ''
+        -
+          - color
+          - '#d9ead3'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Playable
+        -
+          - value
+          - playable
+        -
+          - icon
+          - ''
+        -
+          - color
+          - '#c9daf8'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Unsupported
+        -
+          - value
+          - unsupported
+        -
+          - icon
+          - ''
+        -
+          - color
+          - '#f4cccc'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Unknown
+        -
+          - value
+          - unknown
+        -
+          - icon
+          - ''
+        -
+          - color
+          - '#fce5cd'
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

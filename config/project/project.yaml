@@ -1,0 +1,107 @@
+dateModified: 1773589095
+elementSources:
+  craft\elements\Entry:
+    -
+      key: '*'
+      page: Entries
+      type: native
+    -
+      heading: Games
+      key: 'heading:1fc08867-affa-4ae2-b3d9-a3fc3d508de4'
+      page: Entries
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:684744e4-f915-4d31-bbe8-de6f9eca49ce' # Games
+      page: Entries
+      tableAttributes:
+        - 'field:3cc456a2-6841-482f-bb24-8c908f779d19' # Hours Played
+        - 'fieldInstance:f62ffc52-0599-480a-84e6-add481d3751d'
+        - 'field:0854e3c6-e8ba-41b1-b063-bbbe6c89dc06' # User Score Count
+        - 'field:f282f261-a4ce-427c-bb65-b125746c9d79' # Owned By
+        - 'field:d22b97ad-e3bc-4f20-9e30-741fb9c45418' # Picked
+      type: native
+    -
+      heading: Gamers
+      key: 'heading:6c77ed84-ebf9-4ab0-a48c-c734b640dbfc'
+      page: Entries
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:10f9cc5e-0a38-40ac-9e72-305fffaad3b8' # Gamers
+      page: Entries
+      tableAttributes:
+        - 'field:471eca67-0487-4460-ab89-3107cded4959' # Steam Username
+      type: native
+email:
+  fromEmail: jsudimak302@gmail.com
+  fromName: 'Pick a Game'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  localExports:
+    hasUrls: false
+    name: 'Local Exports'
+    settings:
+      path: $LOCAL_EXPORTS_BASEPATH
+    type: craft\fs\Local
+    url: $LOCAL_EXPORTS_BASEURL
+meta:
+  __names__:
+    3cc456a2-6841-482f-bb24-8c908f779d19: 'Hours Played' # Hours Played
+    6f317846-4aa5-4714-b323-a4d0927f26e3: 'Pick a Game' # Pick a Game
+    10f9cc5e-0a38-40ac-9e72-305fffaad3b8: Gamers # Gamers
+    52a95eb3-8ad8-496e-8e7c-303db0e407a5: 'Pick a Game' # Pick a Game
+    471eca67-0487-4460-ab89-3107cded4959: 'Steam Username' # Steam Username
+    0854e3c6-e8ba-41b1-b063-bbbe6c89dc06: 'User Score Count' # User Score Count
+    4955ee96-8d42-4100-a5e1-6422a9c61f42: 'Release Date' # Release Date
+    82422d31-cc8f-4630-b8b7-51d133532793: Score # Score
+    684744e4-f915-4d31-bbe8-de6f9eca49ce: Games # Games
+    bda87159-18d2-424c-bf74-62c2dacefb9e: 'Steam Deck Support' # Steam Deck Support
+    c0e78de1-e877-44da-beeb-0691d9abb8d0: 'Game Exports' # Game Exports
+    c1775f2d-89aa-43e1-862b-d9ac19d9f778: 'Steam ID' # Steam ID
+    c9830e87-7103-4b77-91c3-539d99696549: Game # Game
+    d22b97ad-e3bc-4f20-9e30-741fb9c45418: Picked # Picked
+    e7c4a0a1-76d4-4e94-8303-5c9911750582: Gamer # Gamer
+    f282f261-a4ce-427c-bb65-b125746c9d79: 'Owned By' # Owned By
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.0.0.1
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  datastar:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.14.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Pick a Game'
+  schemaVersion: 5.9.0.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

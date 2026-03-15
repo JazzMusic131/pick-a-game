@@ -1,0 +1,20 @@
+# Craft
+/.env
+/.idea
+/web/dist
+/web/cache
+
+# composer
+/vendor
+
+# npm
+node_modules
+
+# Scripts
+sync-db.sh
+deploy.sh
+
+# Misc
+.vscode
+.DS_Store
+TODO.md
