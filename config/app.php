@@ -25,8 +25,4 @@ use modules\pickagame\Module;
 
 return [
     'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
-    'modules' => [
-        'pick-a-game' => Module::class,
-    ],
-    'bootstrap' => ['pick-a-game'],
 ];

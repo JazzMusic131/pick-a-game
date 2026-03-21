@@ -37,7 +37,6 @@
                 </select>
                 <button id="pick-btn" class="preload"
                     x-show="gamer !== ''"
-                    @click="pickAGame(gamer)"
                 >
                     What Should I Play?
                 </button>
@@ -68,81 +67,3 @@
     </div>
 
 {% endblock %}
-
-
-{% js %}
-    
-    function pickAGame(selectedGamerId) {
-
-        console.log('Selected gamer ID:', selectedGamerId);
-
-        // Reset Game Info content
-        let elemGameResults = document.getElementById("game-results");
-        if (elemGameResults) {
-            if (elemGameResults.classList.contains('opacity-100')) {
-                elemGameResults.classList.remove('opacity-100');
-                elemGameResults.classList.add('opacity-0');
-            }
-        }
-
-        const getSessionInfo = () => {
-            return fetch('/actions/users/session-info', {
-                headers: {
-                    'Accept': 'application/json',
-                },
-            })
-            .then(response => response.json())
-        }
-
-        getSessionInfo()
-        .then(session => {
-
-            const params = new FormData();
-            params.append('gamerId', selectedGamerId);
-
-            return fetch('/actions/pick-a-game/pick', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'X-CSRF-Token': session.csrfTokenValue,
-                    'X-Requested-With': 'XMLHttpRequest',
-                },
-                body: params,
-            })
-            .then(response => response.json())
-            .then(result => {
-
-                if (result.status == 'error') {
-                    console.error(result.message);
-                } else {
-
-                    if (elemGameResults) {
-
-                        let elemGameTitle = elemGameResults.querySelector("#game-title");
-                        let elemSteamLink = elemGameResults.querySelector("#game-steam-link");
-                        let elemUserScore = elemGameResults.querySelector("#game-userscore");
-                        let elemUserScoreCount = elemGameResults.querySelector("#game-userscore-count");
-                        let elemWilson = elemGameResults.querySelector("#game-wilson");
-                        let elemSdb = elemGameResults.querySelector("#game-sdb");
-
-                        elemGameTitle.innerHTML = `${result.game.title} (${result.game.releaseYear})`;
-                        elemSteamLink.href = `https://store.steampowered.com/app/${result.game.steamId}`;
-                        elemUserScore.innerHTML = `User Score: ${result.game.steamUserScore.toString()}`;
-                        elemUserScoreCount.innerHTML = `User Score Count: ${result.game.steamUserScoreCount.toString()}`;
-                        elemWilson.innerHTML = `Wilson Score: ${result.game.wilsonScore.toString()}`;
-                        elemSdb.innerHTML = `SDB Rating: ${result.game.sdbRating.toString()}`;
-
-                        elemGameResults.classList.add('opacity-100');
-                        elemGameResults.classList.remove('oopacity-0');
-
-                    }
-
-                }
-                
-            })
-
-        });
-
-    }
-
-{% endjs %}

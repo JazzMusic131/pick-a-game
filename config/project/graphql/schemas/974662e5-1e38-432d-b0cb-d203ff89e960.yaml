@@ -1,0 +1,6 @@
+isPublic: false
+name: 'Private Schema'
+scope:
+  - 'sites.52a95eb3-8ad8-496e-8e7c-303db0e407a5:read' # Pick a Game
+  - 'sections.10f9cc5e-0a38-40ac-9e72-305fffaad3b8:read' # Gamers
+  - 'sections.684744e4-f915-4d31-bbe8-de6f9eca49ce:read' # Games

@@ -19,6 +19,9 @@ import './alpine/index';
 import { initPreloads } from './modules/misc';
 initPreloads();
 
+import { initPickAGame } from './modules/pick';
+initPickAGame();
+
 /* END - MODULES */
 
 

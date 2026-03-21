@@ -1,4 +1,4 @@
-dateModified: 1773589095
+dateModified: 1774106859
 elementSources:
   craft\elements\Entry:
     -
@@ -60,10 +60,12 @@ meta:
     10f9cc5e-0a38-40ac-9e72-305fffaad3b8: Gamers # Gamers
     52a95eb3-8ad8-496e-8e7c-303db0e407a5: 'Pick a Game' # Pick a Game
     471eca67-0487-4460-ab89-3107cded4959: 'Steam Username' # Steam Username
+    641e0f4e-310f-46b0-a42b-7323767547db: 'Public Schema' # Public Schema
     0854e3c6-e8ba-41b1-b063-bbbe6c89dc06: 'User Score Count' # User Score Count
     4955ee96-8d42-4100-a5e1-6422a9c61f42: 'Release Date' # Release Date
     82422d31-cc8f-4630-b8b7-51d133532793: Score # Score
     684744e4-f915-4d31-bbe8-de6f9eca49ce: Games # Games
+    974662e5-1e38-432d-b0cb-d203ff89e960: 'Private Schema' # Private Schema
     bda87159-18d2-424c-bf74-62c2dacefb9e: 'Steam Deck Support' # Steam Deck Support
     c0e78de1-e877-44da-beeb-0691d9abb8d0: 'Game Exports' # Game Exports
     c1775f2d-89aa-43e1-862b-d9ac19d9f778: 'Steam ID' # Steam ID
