@@ -11,6 +11,9 @@ export const initPickAGame = () => {
 
     pickBtn.addEventListener('click', () => {
 
+        let elemGamer = document.getElementById("gamer-select");
+        const gamerId = elemGamer.value;
+
         if (elemGameResults) {
             if (elemGameResults.classList.contains('opacity-100')) {
                 elemGameResults.classList.remove('opacity-100');
@@ -28,24 +31,32 @@ export const initPickAGame = () => {
                 'Authorization': 'Bearer ' + ApiToken
             },
             body: JSON.stringify({
-                query: `query gameQuery {
+                query: `query GetRandomGame {
                     entries(
                         section: "games"
-                        hoursPlayed: 0
-                        wasPicked: false
-                        orderBy: "title"
-                    ) {
+                            orderBy: "title"
+                        ) {
                         id
                         title
                         ... on game_Entry {
-                            steamId
-                            releaseDate
-                            steamUserScore
-                            userScoreCount
-                            wilsonScore
-                            sdbRating
+                        steamId
+                        releaseDate
+                        steamUserScore
+                        userScoreCount
+                        wilsonScore
+                        sdbRating
+                        ownersTable {
+                            ... on ownerRow_Entry {
+                            ownedBy {
+                                ... on gamer_Entry {
+                                    id
+                                    title
+                                }
+                            }
                             hoursPlayed
                             wasPicked
+                            }
+                        }
                         }
                     }
                 }`
@@ -55,31 +66,50 @@ export const initPickAGame = () => {
         .then(data => data.data.entries) // Get the entry data
         .then(data => {
 
+            // Filter games (only games with no hours played based on user)
+            let filteredGames = [];
+            Object.entries(data).forEach(([key, value]) => {
+                Object.entries(value.ownersTable).forEach(([ownersKey, ownersValue]) => {
+                    if (ownersValue.ownedBy[0].id == gamerId && ownersValue.hoursPlayed == 0) {
+                        filteredGames.push(data[key]);
+                    }
+                });
+            });
+
             // Pick random game
-            const randomGame = getRandomGame(data);
-            const releaseYear = new Date(randomGame.data.releaseDate).getFullYear();
-            //console.log(`Random Game: ${randomGame.data.title}`);
+            if (filteredGames.length !== 0) {
 
-            // Display game
-            if (elemGameResults) {
+                const randomGame = getRandomGame(filteredGames);
+                const releaseYear = new Date(randomGame.data.releaseDate).getFullYear();
+                console.log(randomGame.data);
 
+                // Display game
+                if (elemGameResults) {
+
+                    let elemGameTitle = elemGameResults.querySelector("#game-title");
+                    let elemSteamLink = elemGameResults.querySelector("#game-steam-link");
+                    let elemUserScore = elemGameResults.querySelector("#game-userscore");
+                    let elemUserScoreCount = elemGameResults.querySelector("#game-userscore-count");
+                    let elemWilson = elemGameResults.querySelector("#game-wilson");
+                    let elemSdb = elemGameResults.querySelector("#game-sdb");
+
+                    elemGameTitle.innerHTML = `${randomGame.data.title} (${releaseYear})`;
+                    elemSteamLink.href = `https://store.steampowered.com/app/${randomGame.data.steamId}`;
+                    elemUserScore.innerHTML = `User Score: ${randomGame.data.steamUserScore.toString()}`;
+                    elemUserScoreCount.innerHTML = `User Score Count: ${randomGame.data.userScoreCount.toString()}`;
+                    elemWilson.innerHTML = `Wilson Score: ${randomGame.data.wilsonScore.toString()}`;
+                    elemSdb.innerHTML = `SDB Rating: ${randomGame.data.sdbRating.toString()}`;
+
+                    elemGameResults.classList.add('opacity-100');
+                    elemGameResults.classList.remove('opacity-0');
+
+                }
+
+            } else {
                 let elemGameTitle = elemGameResults.querySelector("#game-title");
-                let elemSteamLink = elemGameResults.querySelector("#game-steam-link");
-                let elemUserScore = elemGameResults.querySelector("#game-userscore");
-                let elemUserScoreCount = elemGameResults.querySelector("#game-userscore-count");
-                let elemWilson = elemGameResults.querySelector("#game-wilson");
-                let elemSdb = elemGameResults.querySelector("#game-sdb");
-
-                elemGameTitle.innerHTML = `${randomGame.data.title} (${releaseYear})`;
-                elemSteamLink.href = `https://store.steampowered.com/app/${randomGame.data.steamId}`;
-                elemUserScore.innerHTML = `User Score: ${randomGame.data.steamUserScore.toString()}`;
-                elemUserScoreCount.innerHTML = `User Score Count: ${randomGame.data.userScoreCount.toString()}`;
-                elemWilson.innerHTML = `Wilson Score: ${randomGame.data.wilsonScore.toString()}`;
-                elemSdb.innerHTML = `SDB Rating: ${randomGame.data.sdbRating.toString()}`;
-
+                elemGameTitle.innerHTML = `You've played everything, bruv`;
                 elemGameResults.classList.add('opacity-100');
-                elemGameResults.classList.remove('oopacity-0');
-
+                elemGameResults.classList.remove('opacity-0');
             }
 
         })

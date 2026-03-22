@@ -1,4 +1,4 @@
-dateModified: 1774106859
+dateModified: 1774210150
 elementSources:
   craft\elements\Entry:
     -
@@ -68,10 +68,12 @@ meta:
     974662e5-1e38-432d-b0cb-d203ff89e960: 'Private Schema' # Private Schema
     bda87159-18d2-424c-bf74-62c2dacefb9e: 'Steam Deck Support' # Steam Deck Support
     c0e78de1-e877-44da-beeb-0691d9abb8d0: 'Game Exports' # Game Exports
+    c7be08a0-269b-4f2e-8521-e9dd5ab5f21b: 'Owners Table' # Owners Table
     c1775f2d-89aa-43e1-862b-d9ac19d9f778: 'Steam ID' # Steam ID
     c9830e87-7103-4b77-91c3-539d99696549: Game # Game
     d22b97ad-e3bc-4f20-9e30-741fb9c45418: Picked # Picked
     e7c4a0a1-76d4-4e94-8303-5c9911750582: Gamer # Gamer
+    e974684f-1971-45a3-ab71-f3e50e7f7a84: 'Owner Row' # Owner Row
     f282f261-a4ce-427c-bb65-b125746c9d79: 'Owned By' # Owned By
 plugins:
   ckeditor:

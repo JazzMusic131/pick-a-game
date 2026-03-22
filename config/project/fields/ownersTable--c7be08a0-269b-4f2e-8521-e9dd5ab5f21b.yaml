@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: ownersTable
+instructions: null
+name: 'Owners Table'
+searchable: false
+settings:
+  createButtonLabel: 'New row'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - e974684f-1971-45a3-ab71-f3e50e7f7a84 # Owner Row
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: 10
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

@@ -60,6 +60,12 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2026-03-22T20:07:54+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 19ca0626-33dd-4e70-b433-f0ca0d23f9af
+            userCondition: null
+          -
             dateAdded: '2026-02-21T16:52:25+00:00'
             editCondition: null
             elementCondition: null
@@ -77,28 +83,6 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2026-02-21T16:52:25+00:00'
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: 9aeb2fee-ff2f-4c24-a3db-3a8f64758d46
-            userCondition: null
-          -
-            dateAdded: '2026-02-21T16:52:25+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 3cc456a2-6841-482f-bb24-8c908f779d19 # Hours Played
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8c82d6d4-5c62-4eb4-af66-ebf1d64812fa
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            dateAdded: '2026-02-21T16:52:25+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -112,7 +96,7 @@ fieldLayouts:
             uid: cb9dd5b6-3bd6-4e90-bef2-55db5d2b784b
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             dateAdded: '2026-02-21T16:52:25+00:00'
             elementCondition: null
@@ -183,28 +167,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-          -
-            dateAdded: '2026-02-21T16:54:33+00:00'
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: 520cbbe7-55c0-4813-8cb3-7050997351aa
-            userCondition: null
-          -
-            dateAdded: '2026-02-21T16:54:33+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: d22b97ad-e3bc-4f20-9e30-741fb9c45418 # Picked
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: b3272077-9afe-4887-9e22-97f955274758
-            userCondition: null
-            warning: null
-            width: 100
         name: Content
         uid: 0e0b32c2-2e03-412d-8162-ee7500bdad2f
         userCondition: null
@@ -219,18 +181,18 @@ fieldLayouts:
             uid: 66590ca4-7a2c-468e-9188-7cf3e89d2b47
             userCondition: null
           -
-            dateAdded: '2026-02-21T17:11:47+00:00'
+            dateAdded: '2026-03-22T20:06:16+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: f282f261-a4ce-427c-bb65-b125746c9d79 # Owned By
+            fieldUid: c7be08a0-269b-4f2e-8521-e9dd5ab5f21b # Owners Table
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 39e303c1-d817-4f93-90fb-8d6b32a293ba
+            uid: 9c41a3e7-3e76-40b4-9649-001227306d79
             userCondition: null
             warning: null
             width: 100

@@ -1,0 +1,77 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  d5633441-bf9d-428e-a4ca-75899d8c86e3:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:c5e67086-ba1f-4a4c-ab00-7fb45cc5946d'
+      - 'layoutElement:4caee26b-4675-49c8-b91f-c36e7dad5191'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-03-22T20:05:04+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f282f261-a4ce-427c-bb65-b125746c9d79 # Owned By
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c5e67086-ba1f-4a4c-ab00-7fb45cc5946d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2026-03-22T20:05:04+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 3cc456a2-6841-482f-bb24-8c908f779d19 # Hours Played
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4caee26b-4675-49c8-b91f-c36e7dad5191
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2026-03-22T20:08:58+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d22b97ad-e3bc-4f20-9e30-741fb9c45418 # Picked
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cf17507e-999f-4361-9a14-75fc99c79df6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 68505303-13a1-49dc-ad4b-0a2e0657d46a
+        userCondition: null
+    thumbFieldKey: null
+handle: ownerRow
+hasTitleField: false
+icon: head-side
+name: 'Owner Row'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: ''
