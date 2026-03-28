@@ -34,29 +34,29 @@ export const initPickAGame = () => {
                 query: `query GetRandomGame {
                     entries(
                         section: "games"
-                            orderBy: "title"
-                        ) {
+                        orderBy: "title"
+                    ) {
                         id
                         title
                         ... on game_Entry {
-                        steamId
-                        releaseDate
-                        steamUserScore
-                        userScoreCount
-                        wilsonScore
-                        sdbRating
-                        ownersTable {
-                            ... on ownerRow_Entry {
-                            ownedBy {
-                                ... on gamer_Entry {
-                                    id
-                                    title
+                            steamId
+                            releaseDate
+                            steamUserScore
+                            userScoreCount
+                            wilsonScore
+                            sdbRating
+                            ownersTable {
+                                ... on ownerRow_Entry {
+                                ownedBy {
+                                    ... on gamer_Entry {
+                                        id
+                                        title
+                                    }
+                                }
+                                hoursPlayed
+                                wasPicked
                                 }
                             }
-                            hoursPlayed
-                            wasPicked
-                            }
-                        }
                         }
                     }
                 }`
@@ -80,7 +80,7 @@ export const initPickAGame = () => {
             if (filteredGames.length !== 0) {
 
                 const randomGame = getRandomGame(filteredGames);
-                const releaseYear = new Date(randomGame.data.releaseDate).getFullYear();
+                const releaseYear = (randomGame.data.releaseDate) ? new Date(randomGame.data.releaseDate).getFullYear() : null;
                 console.log(randomGame.data);
 
                 // Display game
@@ -93,12 +93,44 @@ export const initPickAGame = () => {
                     let elemWilson = elemGameResults.querySelector("#game-wilson");
                     let elemSdb = elemGameResults.querySelector("#game-sdb");
 
-                    elemGameTitle.innerHTML = `${randomGame.data.title} (${releaseYear})`;
+                    // Title
+                    let title;
+                    title = `${randomGame.data.title}`;
+                    if (releaseYear) {
+                        title += ` (${releaseYear})`;
+                    }
+                    elemGameTitle.innerHTML = title;
+
+                    // Steam ID
                     elemSteamLink.href = `https://store.steampowered.com/app/${randomGame.data.steamId}`;
-                    elemUserScore.innerHTML = `User Score: ${randomGame.data.steamUserScore.toString()}`;
-                    elemUserScoreCount.innerHTML = `User Score Count: ${randomGame.data.userScoreCount.toString()}`;
-                    elemWilson.innerHTML = `Wilson Score: ${randomGame.data.wilsonScore.toString()}`;
-                    elemSdb.innerHTML = `SDB Rating: ${randomGame.data.sdbRating.toString()}`;
+
+                    // Steam User Score
+                    if (randomGame.data.steamUserScore) {
+                        elemUserScore.innerHTML = `User Score: ${randomGame.data.steamUserScore.toString()}`;
+                    } else {
+                        elemUserScore.innerHTML = "";
+                    }
+
+                    // User Score Count
+                    if (randomGame.data.userScoreCount) {
+                        elemUserScoreCount.innerHTML = `User Score Count: ${randomGame.data.userScoreCount.toString()}`;
+                    } else {
+                        elemUserScoreCount.innerHTML = "";
+                    }
+
+                    // https://robbreport.com/wp-content/uploads/2022/11/1-16.jpg?w=1000
+                    if (randomGame.data.wilsonScore) {
+                        elemWilson.innerHTML = `Wilson Score: ${randomGame.data.wilsonScore.toString()}`;
+                    } else {
+                        elemWilson.innerHTML = "";
+                    }
+
+                    // SDB Rating
+                    if (randomGame.data.sdbRating) {
+                        elemSdb.innerHTML = `SDB Rating: ${randomGame.data.sdbRating.toString()}`;
+                    } else {
+                        elemSdb.innerHTML = "";
+                    }
 
                     elemGameResults.classList.add('opacity-100');
                     elemGameResults.classList.remove('opacity-0');
