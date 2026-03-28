@@ -2,8 +2,8 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/ckeditor": "5.2.0",
-    "craftcms/cms": "5.9.16",
+    "craftcms/ckeditor": "5.3.1",
+    "craftcms/cms": "5.9.18",
     "craftcms/feed-me": "6.11.0",
     "doublesecretagency/craft-cpcss": "^3.0.0",
     "nystudio107/craft-vite": "^5.0.1",
