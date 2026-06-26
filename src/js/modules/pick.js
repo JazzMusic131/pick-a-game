@@ -7,9 +7,12 @@ export const initPickAGame = () => {
     }
 
 
+    let elemLoading = document.getElementById("game-loading");
     let elemGameResults = document.getElementById("game-results");
 
     pickBtn.addEventListener('click', () => {
+
+        elemLoading.classList.remove('hidden');
 
         let elemGamer = document.getElementById("gamer-select");
         const gamerId = elemGamer.value;
@@ -132,6 +135,7 @@ export const initPickAGame = () => {
                         elemSdb.innerHTML = "";
                     }
 
+                    elemLoading.classList.add('hidden');
                     elemGameResults.classList.add('opacity-100');
                     elemGameResults.classList.remove('opacity-0');
 

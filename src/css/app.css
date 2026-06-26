@@ -11,6 +11,7 @@
 @source "../../templates";
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
+@plugin "tailwindcss-motion";
 
 /* Theme settings */
 @theme {
