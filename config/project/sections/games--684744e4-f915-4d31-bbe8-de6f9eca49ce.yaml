@@ -5,6 +5,7 @@ entryTypes:
     uid: c9830e87-7103-4b77-91c3-539d99696549 # Game
 handle: games
 maxAuthors: 1
+minAuthors: 1
 name: Games
 previewTargets:
   -
